@@ -1,0 +1,9 @@
+EXPORT GaussSeidel(M1)
+BEGIN
+	[m,n] = size(M1);
+	if m~=n then 
+			PRINT("ERRO: A matriz não é quadrada");
+	end;
+	
+	RETURN M2;
+END;

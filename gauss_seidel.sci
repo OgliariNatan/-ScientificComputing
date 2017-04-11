@@ -4,7 +4,7 @@ function [x,iter] = gauss_seidel(A,b,lam,es,maxi)
     //x é o vetor solução
     //A é a matriz de coeficientes
     // b é o vetor de entradas 
-    //lam é o fator de relachamento, default=1
+    //lam é o fator de relachamento, default=1A
     //es é o criterio de parada, default=0.00001%
     //maxi é o numero maximo de iteração, default=50
     
