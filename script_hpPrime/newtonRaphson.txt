@@ -1,0 +1,6 @@
+EXPORT newtonRaphson(int *der, int *fun)
+BEGIN
+	LOCAL n;
+	n:= 90;
+	RETURN n;
+END;
