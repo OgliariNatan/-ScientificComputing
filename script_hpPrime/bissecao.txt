@@ -1,0 +1,34 @@
+EXPORT bissecao ()
+BEGIN
+local F, n, xold, xnew, err, ref;
+if input(
+{F, xnew, err},
+"metodo",
+{"F(X)=", "Xi=", "Erro="},
+{
+"Entre com a função",
+"Entre com o valor inicial de x",
+"Entre com o Erro"
+},
+{F,xnew,err}
+) then
+F1:=F;
+CAS("F2:=F1'");
+F4:=expr("'X-F1(X)/F2(X)'");
+
+ref:=1;
+n:=1;
+
+while(ref>err) do
+M1(n,1):=xnew;
+M1(n,2):=F1(xnew);
+M1(n,3):=F2(xnew);
+M1(n,4):=F4(xnew);
+xold:=xnew;
+xnew:=M1(n,4);
+M1(n,5):=abs(xnew-xold);
+ref:=M1(n,5);
+n:=n+1;
+end;
+end;
+END;
