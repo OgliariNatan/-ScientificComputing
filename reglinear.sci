@@ -1,4 +1,6 @@
 function  [a,r2] = reglinear(x,y)
+    //a -> Coeficientes
+    //r2 -> Grau de certeza
     //verificação dos dados
     n=length(x);
     if(n~=length(x)) then
@@ -22,7 +24,7 @@ function  [a,r2] = reglinear(x,y)
     elseif (op == 3) then
         y=log10(y);
         x=log10(x);
-    elseif (op ==4) then
+    elseif (op == 4) then
         disp("Entre com a ordem m do modelo: ");
         m = input("A ordem é: ");
         y = 1 ./y;
@@ -57,4 +59,5 @@ function  [a,r2] = reglinear(x,y)
     end
     //plota o grafico linearizado 
     plot(xa,ya);
+    
 endfunction

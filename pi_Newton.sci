@@ -15,15 +15,21 @@ function ye = pi_Newton(p,y,xe)
     for j=3:n+1 
         for i=l:-1:2
             A(i-1,j) = (A(i,j-1) - A(i-1,j-1)) / (A(i+k,1) - A(i-1,1));
-            disp(A);
+            //disp(A);
         end
         l=l-1;
         k = k + 1;
     end
-    ye = 0; //COMENTAR ESTA LINHA
+    //ye = 0; //COMENTAR ESTA LINHA
     //Calculo do valor extrapolado newton
     //pg 26 = 27
-    for d=n:-1:1
+    ye = 0;
+    for d = n:-1:1
+        jota = 1;
+        for j = 1:d-1
+            jota = jota*(xe-x(j));
+        end
+        ye = ye + jota*A(d);
         
     end
 endfunction
