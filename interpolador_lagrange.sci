@@ -19,7 +19,7 @@
 //
 
 function vi = interpolador_lagrange( _x, _y, _pa )    
-    //Sendo o tamanho dos vectores correspondentes a ordem de lagranje
+    //Sendo o tamanho dos vectores correspondentes a ordem+1 de lagranje
     [ mx, nx ] = size(_x);
     [ my, ny ] = size(_y);    
     if nx ~= ny then
